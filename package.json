@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href https://IamAlexey.github.io/meggy-shop/",
+    "build": "ng build --prod --base-href /meggy-shop/",
     "deploy": "ngh",
     "test": "ng test",
     "lint": "ng lint",

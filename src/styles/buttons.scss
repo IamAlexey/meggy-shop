@@ -1,0 +1,65 @@
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.resset-button {
+  @include reset-button();
+}
+
+@mixin -green {
+  &.-green {
+    background-color: $cian;
+    &:hover {
+      background-color: $cian-hover;
+    }
+    &:active {
+      background-color: $cian-active;
+    }
+  }
+}
+
+@mixin round-button {
+  @include reset-button;
+  display: block;
+  padding-left: 19px;
+  padding-right: 19px;
+  width: 100%;
+  height: 48px;
+  color: $white;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 48px;
+  background-color: $btn-bg-orange;
+  border: 0;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  &:hover {
+    background-color: $orange-hover;
+  }
+  &:active {
+    background-color: $orange-active;
+  }
+}
+
+@mixin text-button {
+  @include reset-button();
+  display: block;
+  color: $cian;
+  font-family: Roboto;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.text-button {
+  @include text-button();
+}

@@ -1,0 +1,99 @@
+@import '../../../styles/colors';
+@import '../../../styles/buttons';
+
+.item-block {
+  display: flex;
+  flex-direction: column;
+  width: 267px;
+  height: 100%;
+  box-shadow: 0 4px 21px $box-shadow-gray;
+  border: 1px solid $light-gray;
+  background-color: $white;
+  border-radius: 15px;
+  overflow: hidden;
+  > .image-block {
+    position: relative;
+    width: 267px;
+    height: 200px;
+    background-image: url('/assets/images/palma2-temp-img.jpg');
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    > .specialoffer {
+      display: none;
+    }
+  }
+  > .content-block {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    min-height: 107px;
+    > .name {
+      display: block;
+      min-height: 18px;
+      color: $black;
+      font-family: 'Roboto Condensed';
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: underline;
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+    }
+    > .lastline {
+      margin-top: 29px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > .points {
+        color: $black;
+        font-family: 'Roboto Condensed';
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      > .tobucket {
+        @include round-button;
+        display: inline;
+        margin-left: 12px;
+        padding-left: 17px;
+        padding-right: 17px;
+        width: 122px;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+  &.-super {
+    > .image-block > .specialoffer {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      top: -38px;
+      left: 168px;
+      padding-bottom: 7px;
+      width: 160px;
+      height: 108px;
+      text-align: center;
+      border: 1px solid $white;
+      background-color: $yellow;
+      transform: rotate(45deg);
+      > span {
+        color: $white;
+        font-family: 'Roboto Condensed';
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

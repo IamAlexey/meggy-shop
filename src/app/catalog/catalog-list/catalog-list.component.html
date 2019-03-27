@@ -1,0 +1,18 @@
+<div class="bonus-store">
+  <div class="container">
+
+    <div class="grid">
+      <div class="left">
+      </div>
+      <div class="right">
+        <div
+          class="catalog-block">
+          <app-catalog-item
+            *ngFor="let item of items"
+            [item]="item">
+          </app-catalog-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

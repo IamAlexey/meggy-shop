@@ -1,0 +1,120 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+@import '../../../styles/form-items';
+
+.bonus-store {
+  app-spinner {
+    display: block;
+    margin: 50px auto;
+  }
+  > .container {
+    > h2.title-main {
+      margin-top: 29px;
+    }
+    > h2.title2 {
+      margin-top: 49px;
+    }
+    > .grid {
+      display: flex;
+      margin-top: 31px;
+      min-height: 392px;
+      > .left {
+        .storemenu-component {
+          display: block;
+          width: 270px;
+          margin: auto;
+        }
+      }
+      > .right {
+        margin-left: 30px;
+        width: calc(100% - 270px);
+        > .catalog-block {
+          display: flex;
+          flex-wrap: wrap;
+          width: calc(99% + 10px);
+          > app-catalog-item {
+            margin-top: 28px;
+            &:not(:nth-child(3n - 2)) {
+              margin-left: 19px;
+            }
+          }
+        }
+        > app-spinner {
+          margin: auto;
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .bonus-store {
+    > .container {
+      > .grid {
+        > .right {
+          width: auto;
+          > .catalog-block {
+            width: 553px;
+            > app-catalog-item {
+              margin-top: 28px;
+              &:not(:nth-child(3n - 2)) {
+                margin-left: 0;
+              }
+              &:not(:nth-child(2n - 1)) {
+                margin-left: 19px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .bonus-store {
+    > .container {
+      > .grid {
+        > .right {
+          > .catalog-block {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            width: auto;
+            > app-catalog-item {
+              margin-top: 28px;
+              &:not(:nth-child(3n - 2)) {
+                margin-left: 0;
+              }
+              &:not(:nth-child(2n - 1)) {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .bonus-store {
+    > .container {
+      > .grid {
+        flex-direction: column;
+        > .left {
+          > ul.store-menu {
+            margin: 0 auto;
+          }
+        }
+        > .right {
+          margin-left: 0;
+          > app-bread-crumbs {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

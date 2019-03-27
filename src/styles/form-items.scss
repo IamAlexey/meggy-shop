@@ -1,0 +1,214 @@
+@import '../styles/mixins';
+@import '../styles/buttons.scss';
+
+@mixin custom-select($height: 25px, $radius: 25px) {
+  padding-left: 11px;
+  width: 198px;
+  height: $height;
+  color: $black;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid $gray;
+  border-radius: $radius;
+  background-color: $white;
+  background-image: url('/assets/images/icons/select-triangle-icon.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) center;
+  appearance: none;
+  outline: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.normal-custom-select {
+  @include custom-select();
+}
+
+.small-custom-select {
+  @include custom-select(36px, 36px);
+  padding-left: 13px;
+  width: 240px;
+  background-image: url('/assets/images/icons/select-tiangle2-icon.svg');
+  background-position: calc(100% - 11px) center;
+}
+
+.big-custom-select {
+  @include custom-select(48px, 20px);
+  padding-left: 18px;
+  padding-right: 20px;
+  min-width: 242px;
+  background-image: url('/assets/images/icons/select-tiangle2-icon.svg');
+  background-position: calc(100% - 11px) center;
+  &.-bigicon {
+    background-image: url('/assets/images/icons/select-tiangle-big-icon.svg');
+    background-position: calc(100% - 18px) center;
+  }
+}
+
+.medium-custom-select {
+  @include custom-select(36px, 36px);
+  padding-left: 13px;
+  background-position: calc(100% - 13px) center;
+}
+
+@mixin input-field {
+  &[type='text'],
+  &[type='number'],
+  &[type='tel'],
+  &[type='email'],
+  &[type='password'] {
+    display: block;
+    padding-left: 19px;
+    padding-right: 19px;
+    width: 100%;
+    height: 48px;
+    color: $black;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    border: 0;
+    border-radius: 18px;
+    outline: none;
+    &.-border-gray {
+      border: 1px solid $gray;
+    }
+  }
+  &:placeholder {
+    color: $text-gray;
+  }
+}
+
+.input-field {
+  @include input-field();
+  @include -small();
+}
+
+@mixin -icon {
+  &.-icon {
+    background-image: url('/assets/images/icons/search-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+  }
+}
+
+@mixin search-block {
+  position: relative;
+  width: 236px;
+  > .input-field {
+    @include input-field();
+    @include -small();
+  }
+  > .button-icon {
+    @include reset-button();
+    @include -icon();
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.search-block {
+  @include search-block();
+}
+
+@mixin number-field {
+  @include input-field;
+  &[type='number'] {
+    padding-left: 11px;
+    width: 103px;
+    height: 25px;
+    line-height: 25px;
+    color: $black;
+    border: 1px solid $gray;
+  }
+}
+
+.number-field {
+  @include number-field;
+  &.-big {
+    display: inline-block;
+    width: 116px;
+    height: 48px;
+    border-radius: 20px;
+  }
+}
+
+@mixin custom-radio {
+  display: none;
+  & + label {
+    position: relative;
+    padding-left: 28px;
+    color: $black;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    cursor: pointer;
+  }
+  & + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    background-color: $white;
+    border: 2px solid $dark-gray;
+    border-radius: 50%;
+  }
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    background-color: $cian;
+    border-radius: 50%;
+  }
+}
+
+.custom-radio {
+  @include custom-radio();
+}
+
+@mixin custom-checkbox {
+  display: none;
+  & + label {
+    position: relative;
+    display: block;
+    padding-left: 37px;
+    cursor: pointer;
+  }
+  & + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    border-radius: 7px;
+  }
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    width: 14px;
+    height: 12px;
+    background-image: url('/assets/images/icons/checkbox-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.custom-checkbox {
+  @include custom-checkbox();
+}
