@@ -11,7 +11,6 @@
   border: 1px solid $gray;
   border-radius: $radius;
   background-color: $white;
-  background-image: url('/assets/images/icons/select-triangle-icon.svg');
   background-repeat: no-repeat;
   background-position: calc(100% - 8px) center;
   appearance: none;
@@ -29,7 +28,6 @@
   @include custom-select(36px, 36px);
   padding-left: 13px;
   width: 240px;
-  background-image: url('/assets/images/icons/select-tiangle2-icon.svg');
   background-position: calc(100% - 11px) center;
 }
 
@@ -38,10 +36,8 @@
   padding-left: 18px;
   padding-right: 20px;
   min-width: 242px;
-  background-image: url('/assets/images/icons/select-tiangle2-icon.svg');
   background-position: calc(100% - 11px) center;
   &.-bigicon {
-    background-image: url('/assets/images/icons/select-tiangle-big-icon.svg');
     background-position: calc(100% - 18px) center;
   }
 }
@@ -87,7 +83,6 @@
 
 @mixin -icon {
   &.-icon {
-    background-image: url('/assets/images/icons/search-icon.svg');
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: center;
@@ -202,7 +197,6 @@
     top: 6px;
     width: 14px;
     height: 12px;
-    background-image: url('/assets/images/icons/checkbox-icon.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

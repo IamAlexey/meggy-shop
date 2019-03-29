@@ -12,15 +12,15 @@ export class CatalogItemComponent implements OnInit {
   @Output()
   addToBucketEvent: EventEmitter<any> = new EventEmitter();
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   getImage() {
-    const url: string = this.item.thumb_photo
-      ? `url(${this.item.thumb_photo})`
-      : 'url(assets/images/no-foto-img.jpg)';
-    return { 'background-image': url };
+    const url = `url(${this.item.thumb_photo})`;
+    return {'background-image': url};
   }
 
   addToBucket() {

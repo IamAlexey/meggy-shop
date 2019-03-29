@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/fonts/Roboto/roboto.css",
+              "src/assets/fonts/Roboto-condensed/robotocondensed.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true

@@ -73,13 +73,10 @@
 
 @mixin bonus-item-image($icon-name) {
   > a {
-    background-image: url('/assets/images/icons/sections/'+$icon-name+'.svg');
   }
   &.-disabled > a {
-    background-image: url('/assets/images/icons/sections/'+$icon-name+'-disabled.svg');
   }
   &.-active > a {
-    background-image: url('/assets/images/icons/sections/'+$icon-name+'-active.svg');
   }
 }
 
