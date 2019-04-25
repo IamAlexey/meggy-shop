@@ -1,5 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Item, RootObject} from '../../../model/product';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component';
 declare var VK;
 
 export interface ItemType {
@@ -10,7 +12,7 @@ export interface ItemType {
 @Component({
   selector: 'app-catalog-list',
   templateUrl: './catalog-list.component.html',
-  styleUrls: ['./catalog-list.component.scss'],
+  styleUrls: ['./catalog-list.component.scss']
 })
 export class CatalogListComponent implements OnInit {
 
@@ -21,10 +23,10 @@ export class CatalogListComponent implements OnInit {
   items: Item[];
 
   itemTypes: ItemType[] = [
-    {value: 'steak-0', viewValue: 'Все'},
-    {value: 'pizza-1', viewValue: 'Лакомства'},
-    {value: 'tacos-2', viewValue: 'Ошейники'},
-    {value: 'tacos-3', viewValue: 'Рога'},
+    {value: 'all', viewValue: 'Все товары'},
+    {value: 'yummie', viewValue: 'Лакомства'},
+    {value: 'collar', viewValue: 'Ошейники'},
+    {value: 'horns', viewValue: 'Рога'},
   ];
 
   ngOnInit(): void {

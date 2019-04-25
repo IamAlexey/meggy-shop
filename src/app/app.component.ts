@@ -1,5 +1,4 @@
-import {ChangeDetectorRef, Component, NgZone, OnInit} from '@angular/core';
-import {Item, RootObject} from '../model/product';
+import {Component, OnInit} from '@angular/core';
 
 declare var VK;
 

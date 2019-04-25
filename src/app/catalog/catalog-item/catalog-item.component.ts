@@ -1,10 +1,12 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, NgZone, OnInit, Output} from '@angular/core';
 import {Item} from '../../../model/product';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component';
 
 @Component({
   selector: 'app-catalog-item',
   templateUrl: './catalog-item.component.html',
-  styleUrls: ['./catalog-item.component.scss'],
+  styleUrls: ['./catalog-item.component.scss']
 })
 export class CatalogItemComponent implements OnInit {
   @Input()
@@ -12,7 +14,7 @@ export class CatalogItemComponent implements OnInit {
   @Output()
   addToBucketEvent: EventEmitter<any> = new EventEmitter();
 
-  constructor() {
+  constructor(private dialog: MatDialog, private zone: NgZone) {
   }
 
   ngOnInit() {
@@ -25,5 +27,24 @@ export class CatalogItemComponent implements OnInit {
 
   addToBucket() {
     this.addToBucketEvent.emit();
+  }
+
+  openDialog() {
+    this.zone.run(() => {
+      const dialogConfig = new MatDialogConfig();
+
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      dialogConfig.height = '600px';
+      dialogConfig.width = '800px';
+      dialogConfig.data = {
+        description: this.item.description,
+        price: this.item.price,
+        thumb_photo: this.item.thumb_photo,
+        title: this.item.title
+      };
+
+      this.dialog.open(CatalogDialogComponent, dialogConfig);
+    });
   }
 }
