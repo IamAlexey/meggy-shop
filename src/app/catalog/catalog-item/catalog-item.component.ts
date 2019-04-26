@@ -32,11 +32,12 @@ export class CatalogItemComponent implements OnInit {
   openDialog() {
     this.zone.run(() => {
       const dialogConfig = new MatDialogConfig();
-
-      dialogConfig.disableClose = true;
+      dialogConfig.panelClass = 'custom-dialog-container';
       dialogConfig.autoFocus = true;
       dialogConfig.height = '600px';
-      dialogConfig.width = '800px';
+      dialogConfig.width = '460px';
+      dialogConfig.autoFocus = false;
+
       dialogConfig.data = {
         description: this.item.description,
         price: this.item.price,
