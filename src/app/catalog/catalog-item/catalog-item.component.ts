@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, NgZone, OnInit, Output} from '@angular/core';
 import {Item} from '../../../model/product';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component';
 
 @Component({
