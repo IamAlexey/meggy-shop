@@ -7,13 +7,12 @@ import {CatalogItemComponent} from './catalog/catalog-item/catalog-item.componen
 import {CatalogListComponent} from './catalog/catalog-list/catalog-list.component';
 import {RublesPipe} from './pipes/rubles.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatGridListModule, MatToolbarModule, MatIconModule, MatSelectModule, MatSidenavModule, MatListModule} from '@angular/material';
 import {HeaderComponent} from './header/header.component';
-import {MatToolbarModule} from '@angular/material/typings/toolbar';
-import {MatIconModule} from '@angular/material/typings/icon';
-import {MatSelectModule} from '@angular/material/typings/select';
 import {CatalogDialogComponent} from './catalog/catalog-dialog/catalog-dialog.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -23,6 +22,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CatalogDialogComponent,
     HeaderComponent,
     RublesPipe,
+    MainNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatDialogModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

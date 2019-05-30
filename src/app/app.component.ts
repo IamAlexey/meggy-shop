@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 
 declare var VK;
 
@@ -10,9 +10,17 @@ declare var VK;
 export class AppComponent implements OnInit {
   title = 'Хрустики Мегги';
 
+  constructor(private ref: ChangeDetectorRef) {
+
+  }
+
   ngOnInit(): void {
+    const self = this;
     VK.init(() => {
     }, () => {
     }, '5.92');
+
+    VK.callMethod('resizeWindow', document.body.clientWidth, document.documentElement.clientHeight);
+    // self.ref.detectChanges();
   }
 }
