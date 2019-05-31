@@ -1,12 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'">
-    <mat-toolbar>Menu</mat-toolbar>
+               [attr.role]="(isXSmall$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isXSmall$ | async) ? 'over' : 'side'">
+    <mat-toolbar>Меню</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Каталог</a>
-      <a mat-list-item href="#">Корзина</a>
       <a mat-list-item href="#">Мои заказы</a>
+      <a mat-list-item href="#">Корзина</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -16,19 +16,19 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="isXSmall$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Хрустики Мегги</span>
       <span class="spacer"></span>
-      <div *ngIf="!(isHandset$ | async)">
+      <div *ngIf="!(isXSmall$ | async)">
         <a href="#">Каталог</a>
-        <a href="#">Корзина</a>
         <a href="#">Мои заказы</a>
+        <a href="#">Корзина</a>
       </div>
     </mat-toolbar>
     <ng-content>
 
     </ng-content>
-  </mat-sidenav-content>
+  </mat-sidenav-content>ру
 </mat-sidenav-container>

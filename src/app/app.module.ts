@@ -17,7 +17,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {HeaderComponent} from './header/header.component';
 import {CatalogDialogComponent} from './catalog/catalog-dialog/catalog-dialog.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -29,7 +28,6 @@ import { LayoutModule } from '@angular/cdk/layout';
     CatalogItemComponent,
     CatalogListComponent,
     CatalogDialogComponent,
-    HeaderComponent,
     RublesPipe,
     MainNavComponent,
   ],
