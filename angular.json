@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css",
               "src/assets/fonts/Roboto/roboto.css",
-              "src/assets/fonts/Roboto-condensed/robotocondensed.css"
+              "src/assets/fonts/Roboto-condensed/robotocondensed.css",
+              "src/meggy-app-theme.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
