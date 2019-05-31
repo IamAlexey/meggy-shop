@@ -20,21 +20,25 @@
   z-index: 1;
 }
 
-/*@media (min-width: 768px) {*/
-/*  .sidenav {*/
-/*    display: none;*/
-/*  }*/
-
-/*  .spacer {*/
-/*    flex: 1 1 auto;*/
-/*  }*/
-
-/*  mat-toolbar a {*/
-/*    display: inline-block;*/
-/*    margin: 0 10px;*/
-/*    color: white;*/
-/*    text-decoration: none;*/
-/*  }*/
-
 /* This is necessary for side-nav-bars that launched in Safari */
-.mat-drawer-container{ overflow: visible; }
+.mat-drawer-container {
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+
+}
