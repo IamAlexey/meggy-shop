@@ -11,8 +11,6 @@ import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component
 export class CatalogItemComponent implements OnInit {
   @Input()
   item: Item;
-  @Output()
-  addToBucketEvent: EventEmitter<any> = new EventEmitter();
 
   constructor(private dialog: MatDialog, private zone: NgZone) {
   }
@@ -23,10 +21,6 @@ export class CatalogItemComponent implements OnInit {
   getImage() {
     const url = `url(${this.item.thumb_photo})`;
     return {'background-image': url};
-  }
-
-  addToBucket() {
-    this.addToBucketEvent.emit();
   }
 
   openDialog() {

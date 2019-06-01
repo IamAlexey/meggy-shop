@@ -1,13 +1,10 @@
-<div class="item-block">
-  <div class="image-block" (click)="openDialog()" [ngStyle]="getImage()">
+<mat-card class="card">
+  <mat-card-header>
+  </mat-card-header>
+  <div mat-card-image class="header-image"></div>
+  <mat-card-title>Коробочка - сюрприз для собак</mat-card-title>
+  <div class="container">
+    <mat-card-subtitle>400 руб.</mat-card-subtitle>
+    <button color="accent" mat-mini-fab>+</button>
   </div>
-  <div>
-    <a  class="name">
-      {{item?.title}}
-    </a>
-    <div>
-      <span class="points">{{item?.price.amount | rubles}} руб.  </span>
-      <button mat-raised-button class="to-bucket" (click)="addToBucket()">В корзину</button>
-    </div>
-  </div>
-</div>
+</mat-card>

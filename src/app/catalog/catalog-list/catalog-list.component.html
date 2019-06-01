@@ -1,19 +1,5 @@
-<div style="width:1000px;
-                max-height:750px;
-                overflow-y:scroll;
-            }">
-<mat-form-field>
-  <mat-label>Тип товара</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let type of itemTypes" [value]="type.value">
-      {{type.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<mat-grid-list style="overflow: visible" cols="4" rowHeight="380px">
-  <mat-grid-tile *ngFor="let item of items">
-      <app-catalog-item [item]="item">
-      </app-catalog-item>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="container">
+  <app-catalog-item></app-catalog-item>
+  <app-catalog-item></app-catalog-item>
+  <app-catalog-item></app-catalog-item>
 </div>
