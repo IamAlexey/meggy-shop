@@ -37,3 +37,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+@media screen {
+  .card {
+    max-width: 140px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .card {
+    max-width: 120px;
+  }
+
+}
