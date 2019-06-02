@@ -1,7 +1,6 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Item, RootObject} from '../../../model/product';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component';
+
 declare var VK;
 
 export interface ItemType {

@@ -1,5 +1,6 @@
 <div class="container">
-  <app-catalog-item></app-catalog-item>
-  <app-catalog-item></app-catalog-item>
-  <app-catalog-item></app-catalog-item>
+    <div *ngFor="let item of items">
+      <app-catalog-item [item]="item">
+      </app-catalog-item>
+    </div>
 </div>

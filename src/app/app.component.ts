@@ -17,7 +17,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     const self = this;
     VK.init(() => {
+      console.log('ok here');
     }, () => {
+      console.log('error here');
     }, '5.92');
 
     VK.callMethod('resizeWindow', document.body.clientWidth, document.documentElement.clientHeight);

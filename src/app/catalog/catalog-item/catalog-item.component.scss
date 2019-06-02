@@ -1,11 +1,10 @@
 .card {
-  max-width: 180px;
-  max-height: 280px;
+  width: 180px;
+  height: 240px;
   margin: 4px
 }
 
 .header-image {
-  background-image: url('https://pp.userapi.com/c846221/v846221243/1f91a5/dbXIuiLstvE.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   max-width: 175px;
@@ -25,12 +24,13 @@
 }
 
 .mat-card-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
 .mat-card-title {
-  font-size: 1.1em;
+  font-size: 0.9em;
+  height: 30px;
 }
 
 .container {
@@ -41,13 +41,13 @@
 
 @media screen {
   .card {
-    max-width: 140px;
+    width: 150px;
   }
 }
 
 @media screen and (device-aspect-ratio: 40/71) {
   .card {
-    max-width: 120px;
+    width: 120px;
   }
 
 }
