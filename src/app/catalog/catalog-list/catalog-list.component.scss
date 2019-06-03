@@ -1,4 +1,5 @@
 .container {
   flex-wrap: wrap;
-  overflow-y:scroll;
+  height: 100vh;
+  overflow: auto;
 }
