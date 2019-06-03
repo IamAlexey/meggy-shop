@@ -7,10 +7,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.custom-dialog-container .mat-dialog-container {
-  overflow: hidden;
-}
-
 .container {
   display: flex;
 }

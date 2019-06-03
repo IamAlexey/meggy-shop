@@ -1,0 +1,17 @@
+.custom-dialog-container .mat-dialog-container {
+  overflow: hidden;
+}
+
+.mat-dialog-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 80vh;
+  max-height: 90vh;
+  height: 0;
+  padding-top: 100%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}

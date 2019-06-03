@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, NgZone, OnInit, Output} from '@angular/core';
+import {Component, Input, NgZone, OnInit} from '@angular/core';
 import {Item} from '../../../model/product';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component';
 
 @Component({
@@ -28,8 +28,8 @@ export class CatalogItemComponent implements OnInit {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.panelClass = 'custom-dialog-container';
       dialogConfig.autoFocus = true;
-      dialogConfig.height = '600px';
-      dialogConfig.width = '460px';
+      dialogConfig.height = '90vh';
+      dialogConfig.width = '80vh';
       dialogConfig.autoFocus = false;
 
       dialogConfig.data = {
