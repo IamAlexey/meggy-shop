@@ -26,7 +26,6 @@
               "src/styles.css",
               "src/assets/fonts/Roboto/roboto.css",
               "src/assets/fonts/Roboto-condensed/robotocondensed.css",
-              "src/styles/meggy-mat-button-theme.scss",
               "src/meggy-app-theme.scss"
             ],
             "scripts": [],
