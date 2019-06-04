@@ -28,7 +28,6 @@ export class CatalogItemComponent implements OnInit {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.panelClass = 'custom-dialog-container';
       dialogConfig.autoFocus = true;
-      dialogConfig.height = '90vh';
       dialogConfig.width = '80vh';
       dialogConfig.autoFocus = false;
 

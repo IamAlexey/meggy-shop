@@ -22,3 +22,4 @@ $meggy-app-theme: mat-light-theme($meggy-app-primary, $meggy-app-accent, $meggy-
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($meggy-app-theme);
+@include meggy-mat-button-theme($meggy-app-theme);
