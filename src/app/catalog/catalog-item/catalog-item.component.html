@@ -5,6 +5,6 @@
   <mat-card-title>{{item.title}}</mat-card-title>
   <div class="container">
     <mat-card-subtitle>{{item.price.amount | rubles }} руб.</mat-card-subtitle>
-    <button color="primary" mat-mini-fab>+</button>
+    <button color="primary" (click)="purchase()" mat-mini-fab>+</button>
   </div>
 </mat-card>

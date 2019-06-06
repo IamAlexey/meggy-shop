@@ -2,6 +2,7 @@ import {Component, Input, NgZone, OnInit} from '@angular/core';
 import {Item} from '../../../model/product';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {CatalogDialogComponent} from '../catalog-dialog/catalog-dialog.component';
+import {CatalogPurchaseDialogComponent} from '../catalog-purchase-dialog/catalog-purchase-dialog.component';
 
 @Component({
   selector: 'app-catalog-item',
@@ -27,7 +28,6 @@ export class CatalogItemComponent implements OnInit {
     this.zone.run(() => {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.panelClass = 'custom-dialog-container';
-      dialogConfig.autoFocus = true;
       dialogConfig.width = '80vh';
       dialogConfig.autoFocus = false;
 
@@ -39,6 +39,22 @@ export class CatalogItemComponent implements OnInit {
       };
 
       this.dialog.open(CatalogDialogComponent, dialogConfig);
+    });
+  }
+
+  purchase() {
+    this.zone.run(() => {
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.panelClass = 'custom-dialog-container';
+      dialogConfig.width = '80vh';
+      dialogConfig.autoFocus = false;
+
+      dialogConfig.data = {
+        productId: this.item.id,
+        title: this.item.title
+      };
+
+      this.dialog.open(CatalogPurchaseDialogComponent, dialogConfig);
     });
   }
 }

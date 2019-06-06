@@ -22,6 +22,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MainNavComponent} from './main-nav/main-nav.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatCardModule} from '@angular/material/card';
+import { CatalogPurchaseDialogComponent } from './catalog/catalog-purchase-dialog/catalog-purchase-dialog.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import {MatCardModule} from '@angular/material/card';
     CatalogDialogComponent,
     RublesPipe,
     MainNavComponent,
+    CatalogPurchaseDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,11 +54,12 @@ import {MatCardModule} from '@angular/material/card';
     LayoutModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [CatalogDialogComponent]
+  entryComponents: [CatalogDialogComponent, CatalogPurchaseDialogComponent]
 })
 export class AppModule {
 }
