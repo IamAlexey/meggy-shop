@@ -25,12 +25,8 @@
   overflow: visible;
 }
 
-mat-icon {
+mat-icon, mat-toolbar span, .mat-button  {
   color:white;
-}
-
-mat-toolbar span {
-  color: white;
 }
 
 @media (min-width: 600px) {

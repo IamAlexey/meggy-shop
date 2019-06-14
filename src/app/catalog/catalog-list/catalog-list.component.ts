@@ -21,13 +21,6 @@ export class CatalogListComponent implements OnInit {
 
   items: Item[];
 
-  itemTypes: ItemType[] = [
-    {value: 'all', viewValue: 'Все товары'},
-    {value: 'yummie', viewValue: 'Лакомства'},
-    {value: 'collar', viewValue: 'Ошейники'},
-    {value: 'horns', viewValue: 'Рога'},
-  ];
-
   ngOnInit(): void {
     const self = this;
     VK.api('market.get', {owner_id: -160678993}, (rootObject: RootObject) => {

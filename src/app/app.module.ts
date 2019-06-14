@@ -22,8 +22,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MainNavComponent} from './main-nav/main-nav.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatCardModule} from '@angular/material/card';
-import { CatalogPurchaseDialogComponent } from './catalog/catalog-purchase-dialog/catalog-purchase-dialog.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {CatalogPurchaseDialogComponent} from './catalog/catalog-purchase-dialog/catalog-purchase-dialog.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ProductSettingsComponent} from './backoffice/product-settings/product-settings.component';
+import {MatMenuModule, MatSortModule, MatTableModule} from '@angular/material';
+import {MatPaginatorModule} from "@angular/material/typings/paginator";
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     CatalogDialogComponent,
     RublesPipe,
     MainNavComponent,
-    CatalogPurchaseDialogComponent
+    CatalogPurchaseDialogComponent,
+    ProductSettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent],

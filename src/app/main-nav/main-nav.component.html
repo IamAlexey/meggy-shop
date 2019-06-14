@@ -25,6 +25,15 @@
         <a href="#">Каталог</a>
         <a href="#">Мои заказы</a>
         <a href="#">Корзина</a>
+        <button [hidden]="appData.userType != 4" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Администрирование">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button routerLink="/product-settings" mat-menu-item>Товары</button>
+        </mat-menu>
+        <mat-menu #menu="matMenu">
+          <button routerLink="/product-settings" mat-menu-item>Заказы</button>
+        </mat-menu>
       </div>
     </mat-toolbar>
     <ng-content>
