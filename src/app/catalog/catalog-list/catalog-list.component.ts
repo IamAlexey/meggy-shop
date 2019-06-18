@@ -2,12 +2,6 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Item, RootObject} from '../../../model/product';
 
 declare var VK;
-
-export interface ItemType {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-catalog-list',
   templateUrl: './catalog-list.component.html',

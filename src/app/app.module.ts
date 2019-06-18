@@ -25,8 +25,10 @@ import {MatCardModule} from '@angular/material/card';
 import {CatalogPurchaseDialogComponent} from './catalog/catalog-purchase-dialog/catalog-purchase-dialog.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSettingsComponent} from './backoffice/product-settings/product-settings.component';
-import {MatMenuModule, MatSortModule, MatTableModule} from '@angular/material';
-import {MatPaginatorModule} from "@angular/material/typings/paginator";
+import {MatMenuModule, MatSortModule, MatTableModule, MatTabsModule} from '@angular/material';
+import {MatPaginatorModule} from '@angular/material/typings/paginator';
+import { CategoryComponent } from './backoffice/product-settings/category/category.component';
+import { ProductCategoryComponent } from './backoffice/product-settings/product-category/product-category.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import {MatPaginatorModule} from "@angular/material/typings/paginator";
     RublesPipe,
     MainNavComponent,
     CatalogPurchaseDialogComponent,
-    ProductSettingsComponent
+    ProductSettingsComponent,
+    CategoryComponent,
+    ProductCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +66,7 @@ import {MatPaginatorModule} from "@angular/material/typings/paginator";
     HttpClientModule,
     MatMenuModule,
     MatTableModule,
+    MatTabsModule,
     MatPaginatorModule,
     MatSortModule
   ],
