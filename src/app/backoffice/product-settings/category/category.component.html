@@ -1,3 +1,39 @@
-<div mat-dialog-actions>
-  <button mat-raised-button color="primary">Добавить свойство товара</button>
+<h3>Категории</h3>
+<div class="main-div">
+    <mat-form-field>
+        <label>
+            <input matInput type="text" placeholder="Введите название категории" [(ngModel)]="newCategory.name">
+        </label>
+    </mat-form-field>
+    <button mat-raised-button color="primary" *ngIf="newCategory.name" (click)="onCategoryAdd()">
+        Добавить новую категорию
+    </button>
+</div>
+<mat-divider></mat-divider>
+<h3>Параметры</h3>
+
+<div class="main-div">
+    <div class="container">
+        <mat-radio-group [(ngModel)]="selectedProductCategory">
+            <mat-radio-button *ngFor="let productCategory of productCategories"
+                              [value]="productCategory">
+                {{productCategory.name}}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field *ngIf="selectedProductCategory" class="chips-list">
+            <mat-chip-list #chipList aria-label="parameters-list">
+                <mat-chip color="primary" *ngFor="let categoryParameter of selectedProductCategory.categoryParameters"
+                          [selectable]="selectable"
+                          [removable]="removable" (removed)="onDeleteCategoryParameter(categoryParameter)">
+                    {{categoryParameter.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="Новый параметр..."
+                       [matChipInputFor]="chipList"
+                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                       [matChipInputAddOnBlur]="addOnBlur"
+                       (matChipInputTokenEnd)="onProductCategoryAdd($event)">
+            </mat-chip-list>
+        </mat-form-field>
+    </div>
 </div>

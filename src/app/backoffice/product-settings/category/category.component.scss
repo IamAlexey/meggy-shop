@@ -1,0 +1,47 @@
+.mat-raised-button {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-width: 40%;
+}
+
+.mat-radio-button {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.container {
+  flex-wrap: wrap;
+  min-width: 40%;
+}
+
+.mat-form-field {
+  min-width: 40%;
+}
+
+mat-radio-group {
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.chips-list {
+  min-width: 50%;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  padding-top: 10px;
+  text-align: center;
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .mat-form-field {
+    min-width: 80%;
+  }
+}

@@ -25,10 +25,16 @@ import {MatCardModule} from '@angular/material/card';
 import {CatalogPurchaseDialogComponent} from './catalog/catalog-purchase-dialog/catalog-purchase-dialog.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSettingsComponent} from './backoffice/product-settings/product-settings.component';
-import {MatMenuModule, MatSortModule, MatTableModule, MatTabsModule} from '@angular/material';
-import {MatPaginatorModule} from '@angular/material/typings/paginator';
-import { CategoryComponent } from './backoffice/product-settings/category/category.component';
-import { ProductCategoryComponent } from './backoffice/product-settings/product-category/product-category.component';
+import {
+  MatAutocompleteModule, MatChipsModule,
+  MatInputModule,
+  MatMenuModule, MatPaginatorModule, MatRadioModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule
+} from '@angular/material';
+import {CategoryComponent} from './backoffice/product-settings/category/category.component';
+import {ProductCategoryComponent} from './backoffice/product-settings/product-category/product-category.component';
 
 
 @NgModule({
@@ -68,7 +74,12 @@ import { ProductCategoryComponent } from './backoffice/product-settings/product-
     MatTableModule,
     MatTabsModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatChipsModule,
+    MatRadioModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
