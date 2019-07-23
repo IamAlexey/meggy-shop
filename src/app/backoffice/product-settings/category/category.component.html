@@ -14,24 +14,24 @@
 
 <div class="main-div">
     <div class="container">
-        <mat-radio-group [(ngModel)]="selectedProductCategory">
-            <mat-radio-button *ngFor="let productCategory of productCategories"
+        <mat-radio-group [(ngModel)]="selectedCategory">
+            <mat-radio-button
+              *ngFor="let productCategory of productCategories"
                               [value]="productCategory">
                 {{productCategory.name}}
             </mat-radio-button>
         </mat-radio-group>
-        <mat-form-field *ngIf="selectedProductCategory" class="chips-list">
+        <mat-form-field *ngIf="selectedCategory" class="chips-list">
             <mat-chip-list #chipList aria-label="parameters-list">
-                <mat-chip color="primary" *ngFor="let categoryParameter of selectedProductCategory.categoryParameters"
+                <mat-chip color="primary" *ngFor="let categoryParameter of selectedCategory.categoryItems"
                           [selectable]="selectable"
-                          [removable]="removable" (removed)="onDeleteCategoryParameter(categoryParameter)">
+                          [removable]="removable">
                     {{categoryParameter.name}}
                     <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
                 </mat-chip>
                 <input placeholder="Новый параметр..."
                        [matChipInputFor]="chipList"
                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                       [matChipInputAddOnBlur]="addOnBlur"
                        (matChipInputTokenEnd)="onProductCategoryAdd($event)">
             </mat-chip-list>
         </mat-form-field>

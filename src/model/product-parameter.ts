@@ -1,19 +1,17 @@
-export class ProductCategory {
+export class Category {
   id: number;
   groupId: number;
   name: string;
-  categoryParameters: Array<ProductCategoryParameter> = [];
+  categoryItems: CategoryItem[] = [];
 }
 
-export class ProductCategoryParameter {
+export class CategoryItem {
 
-  constructor(categoryId: number, name: string) {
-    this.productCategoryId = categoryId;
+  constructor(name: string) {
     this.name = name;
   }
 
   id: number;
-  productCategoryId: number;
   name: string;
 }
 

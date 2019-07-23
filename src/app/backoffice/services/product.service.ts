@@ -1,36 +1,31 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {ProductCategory, ProductCategoryParameter} from '../../../model/product-parameter';
-import {CATEGORY, PARAMETER} from '../../api-constant';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {Category} from '../../../model/product-parameter';
+import {CATEGORY} from '../../api-constant';
 import {Observable} from 'rxjs';
-import {AppInputData} from '../../../model/app-input-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private http: HttpClient, private appInputData: AppInputData) {}
-
-  // Добавить новый параметр для категории
-  addCategoryParameter(productCategoryParameter: ProductCategoryParameter): Observable<ProductCategory> {
-    return this.http.post<ProductCategory>(PARAMETER, productCategoryParameter);
+  constructor(private http: HttpClient) {
   }
 
-  // Удалить параметр у категории
-  deleteCategoryParameter(productCategoryParameter: ProductCategoryParameter): Observable<ProductCategory> {
-    return this.http.post<ProductCategory>(PARAMETER, productCategoryParameter);
+  getCategories(groupId: string): Observable<Category[]> {
+    const options = {params: new HttpParams().set('groupId', groupId)};
+    return this.http.get<Category[]>(CATEGORY, options);
   }
 
   // Добавить новую категорию
-  addCategory(category: ProductCategory): Observable<Array<ProductCategory>> {
-    category.groupId = this.appInputData.groupId;
-    return this.http.post<Array<ProductCategory>>(CATEGORY, category);
+  addCategory(category: Category): Observable<Category[]> {
+    console.log(JSON.stringify(category) + 'sent');
+    return this.http.post<Category[]>(CATEGORY, category);
   }
 
   // Удалить категорию
-  deleteCategory(category: ProductCategory): Observable<Array<ProductCategory>> {
-    return this.http.post<Array<ProductCategory>>(CATEGORY, category);
+  deleteCategory(category: Category): Observable<Array<Category>> {
+    return this.http.post<Category[]>(CATEGORY, category);
   }
 
 }
